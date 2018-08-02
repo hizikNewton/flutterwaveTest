@@ -1,0 +1,9 @@
+{% for obj in object_list %}
+<p>
+<a href= '{{obj.get_absolute_url}}'>{{obj.title}}</a>
+{%if obj.img%}
+<a href= '{{obj.get_absolute_url}}'><img src = '{{obj.img.url}}'/></a>
+{%endif%}
+{{obj}}
+{%endfor%}
+</p>
